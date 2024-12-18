@@ -2,14 +2,14 @@ import "oplsaa.lt"
 
 CH3 inherits OPLSAA {
   write("Data Atoms") {
-    $atom:C   $mol:... @atom:54L    0.0  0.0000  0.0000  0.0000
-    $atom:H1  $mol:... @atom:60LCH3 0.0  0.0000  0.6310  0.8924
-    $atom:H2  $mol:... @atom:60LCH3 0.0  0.0000  0.6310 -0.8924
-    $atom:H3  $mol:... @atom:60LCH3 0.0 -0.8924 -0.6310  0.0000
+    $atom:C1  $mol:... @atom:54  -0.18   0.0000  0.0000  0.0000  # Methyl carbon
+    $atom:H1  $mol:... @atom:60   0.06   0.0000  0.6350  0.8900  # Hydrogen 1
+    $atom:H2  $mol:... @atom:60   0.06   0.6350  0.0000  0.8900  # Hydrogen 2
+    $atom:H3  $mol:... @atom:60   0.06  -0.6350  0.0000 -0.8900  # Hydrogen 3
   }
   write("Data Bond List") {
-    $bond:C-H1 $atom:C $atom:H1
-    $bond:C-H2 $atom:C $atom:H2
-    $bond:C-H3 $atom:C $atom:H3
+    $bond:C1-H1 $atom:C1 $atom:H1
+    $bond:C1-H2 $atom:C1 $atom:H2
+    $bond:C1-H3 $atom:C1 $atom:H3
   }
 }
