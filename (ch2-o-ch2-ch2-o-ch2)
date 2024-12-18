@@ -1,0 +1,35 @@
+import "oplsaa.lt"
+
+DME inherits OPLSAA {
+  write("Data Atoms") {
+    $atom:C1  $mol:... @atom:57  -0.12   0.0000  0.0000  0.0000  # CH2 carbon 1 (alkane)
+    $atom:H11 $mol:... @atom:60   0.06   0.0000  0.6350  0.8900  # Hydrogen 1 (alkane)
+    $atom:H12 $mol:... @atom:60   0.06   0.0000 -0.6350  0.8900  # Hydrogen 2 (alkane)
+    $atom:O1  $mol:... @atom:72   0.00   1.2533  0.0000  0.0000  # Ether oxygen 1
+    $atom:C2  $mol:... @atom:57  -0.12   2.5066  0.0000  0.0000  # CH2 carbon 2 (ether)
+    $atom:H21 $mol:... @atom:60   0.06   2.5066  0.6350  0.8900  # Hydrogen 1 (ether)
+    $atom:H22 $mol:... @atom:60   0.06   2.5066 -0.6350  0.8900  # Hydrogen 2 (ether)
+    $atom:C3  $mol:... @atom:57  -0.12   3.7599  0.0000  0.0000  # CH2 carbon 3 (ether)
+    $atom:H31 $mol:... @atom:60   0.06   3.7599  0.6350  0.8900  # Hydrogen 1 (ether)
+    $atom:H32 $mol:... @atom:60   0.06   3.7599 -0.6350  0.8900  # Hydrogen 2 (ether)
+    $atom:O2  $mol:... @atom:72   0.00   5.0132  0.0000  0.0000  # Ether oxygen 2
+    $atom:C4  $mol:... @atom:57  -0.12   6.2665  0.0000  0.0000  # CH2 carbon 4 (alkane)
+    $atom:H41 $mol:... @atom:60   0.06   6.2665  0.6350  0.8900  # Hydrogen 1 (alkane)
+    $atom:H42 $mol:... @atom:60   0.06   6.2665 -0.6350  0.8900  # Hydrogen 2 (alkane)
+  }
+  write("Data Bond List") {
+    $bond:C1-H11 $atom:C1 $atom:H11
+    $bond:C1-H12 $atom:C1 $atom:H12
+    $bond:C1-O1  $atom:C1 $atom:O1
+    $bond:O1-C2  $atom:O1 $atom:C2
+    $bond:C2-H21 $atom:C2 $atom:H21
+    $bond:C2-H22 $atom:C2 $atom:H22
+    $bond:C2-C3  $atom:C2 $atom:C3
+    $bond:C3-H31 $atom:C3 $atom:H31
+    $bond:C3-H32 $atom:C3 $atom:H32
+    $bond:C3-O2  $atom:C3 $atom:O2
+    $bond:O2-C4  $atom:O2 $atom:C4
+    $bond:C4-H41 $atom:C4 $atom:H41
+    $bond:C4-H42 $atom:C4 $atom:H42
+  }
+}
