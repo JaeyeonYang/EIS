@@ -1,14 +1,15 @@
-
 import "ch3.lt"
-import "ch2-o-ch2-ch2-o-ch2.lt"
+import "ch2o.lt"
 
-DMESystem inherits OPLSAA {
+DME inherits OPLSAA {
+  # Use CH3 and CH2O units to build DME
   ch3_left = new CH3.move(0.0, 0.0, 0.0)
-  ch2o = new CH2OCH2CH2OCH2.move(1.2533, 0.0, 0.0)
+  ch2o_1 = new CH2O.move(1.2533, 0.0, 0.0)
+  ch2o_2 = new CH2O.move(3.7599, 0.0, 0.0)
   ch3_right = new CH3.move(6.2665, 0.0, 0.0)
 
   write("Data Bond List") {
-    $bond:ch3_left-ch2o $atom:ch3_left/C1 $atom:ch2o/C1
-    $bond:ch2o-ch3_right $atom:ch2o/C4 $atom:ch3_right/C1
+    $bond:ch3_left-ch2o_1 $atom:ch3_left/C1 $atom:ch2o_1/C1
+    $bond:ch2o_2-ch3_right $atom:ch2o_2/C2 $atom:ch3_right/C1
   }
 }
