@@ -1,0 +1,17 @@
+# ch3.lt
+import "oplsaa.lt"  # OPLS force field를 불러옵니다.
+
+CH3 inherits OPLSAA {
+  write("Data Atoms") {
+    $atom:C $mol:... @atom:CT 0.0 0.0000 0.0000 0.0000  # CH3의 탄소
+    $atom:H1 $mol:... @atom:HC 0.0 0.0000 0.6340 0.8880  # 첫 번째 수소
+    $atom:H2 $mol:... @atom:HC 0.0 0.0000 0.6340 -0.8880
+    $atom:H3 $mol:... @atom:HC 0.0 0.0000 -0.8880 0.6340
+  }
+
+  write("Data Bond List") {
+    $bond:C-H1 $atom:C $atom:H1
+    $bond:C-H2 $atom:C $atom:H2
+    $bond:C-H3 $atom:C $atom:H3
+  }
+}
