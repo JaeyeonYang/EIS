@@ -1,0 +1,19 @@
+import "ch3.lt"
+import "ch2o.lt"
+
+DME inherits OPLSAA {
+  # 왼쪽 CH3 그룹
+  left_cap = new CH3.move(-1.2533, 0, 0)
+
+  # 중심 CH2-O-CH2
+  core = new CH2O.move(0.0, 0, 0)
+
+  # 오른쪽 CH3 그룹
+  right_cap = new CH3.move(3.7599, 0, 0)
+
+  # 연결된 결합 정의
+  write("Data Bond List") {
+    $bond:left_to_core $atom:left_cap/C $atom:core/C1
+    $bond:right_to_core $atom:core/C2 $atom:right_cap/C
+  }
+}
