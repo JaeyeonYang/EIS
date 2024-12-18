@@ -5,7 +5,7 @@ DME inherits OPLSAA {
   # 왼쪽 CH3 그룹
   left_cap = new CH3.move(-1.2533, 0, 0)
 
-  # 중심 CH2-O-CH2
+  # 중심 CH2-O-CH2 단량체
   core = new CH2O.move(0.0, 0, 0)
 
   # 오른쪽 CH3 그룹
