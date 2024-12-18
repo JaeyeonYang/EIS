@@ -1,0 +1,22 @@
+import "oplsaa.lt"
+
+CH2O inherits OPLSAA {
+  write("Data Atoms") {
+    $atom:C1 $mol:... @atom:CT 0.0 0.0000 0.0000 0.0000
+    $atom:H11 $mol:... @atom:HC 0.0 0.0000 0.6340 0.8880
+    $atom:H12 $mol:... @atom:HC 0.0 0.0000 0.6340 -0.8880
+    $atom:O  $mol:... @atom:O   0.0 1.2533 0.0000 0.0000
+    $atom:C2 $mol:... @atom:CT 0.0 2.5066 0.0000 0.0000
+    $atom:H21 $mol:... @atom:HC 0.0 2.5066 0.6340 0.8880
+    $atom:H22 $mol:... @atom:HC 0.0 2.5066 0.6340 -0.8880
+  }
+
+  write("Data Bond List") {
+    $bond:C1-H11 $atom:C1 $atom:H11
+    $bond:C1-H12 $atom:C1 $atom:H12
+    $bond:C1-O   $atom:C1 $atom:O
+    $bond:O-C2   $atom:O  $atom:C2
+    $bond:C2-H21 $atom:C2 $atom:H21
+    $bond:C2-H22 $atom:C2 $atom:H22
+  }
+}
