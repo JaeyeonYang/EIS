@@ -1,0 +1,11 @@
+import "dme.lt"
+
+# DME 분자 생성
+dme_molecule = new DME
+
+# 시뮬레이션 경계 설정
+write_once("Data Boundary") {
+  0.0 10.0 xlo xhi
+  0.0 10.0 ylo yhi
+  0.0 10.0 zlo zhi
+}
