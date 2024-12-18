@@ -1,17 +1,14 @@
-#set type @atom:57L charge -0.148   # C - CT | CH2 C: alkanes (LOPLS,2012)
-#set type @atom:60LCH2 charge 0.074 # H - HC | CH2 H: alkanes (LOPLS,2012)
-
 import "oplsaa.lt"
 
 CH2O inherits OPLSAA {
   write("Data Atoms") {
-    $atom:C1  $mol:... @atom:57L    0.0  0.0000  0.0000  0.0000
-    $atom:H11 $mol:... @atom:60LCH2 0.0  0.0000  0.6310  0.8924
-    $atom:H12 $mol:... @atom:60LCH2 0.0  0.0000  0.6310 -0.8924
-    $atom:O   $mol:... @atom:O      0.0  1.2533  0.0000  0.0000
-    $atom:C2  $mol:... @atom:57L    0.0  2.5066  0.0000  0.0000
-    $atom:H21 $mol:... @atom:60LCH2 0.0  2.5066  0.6310  0.8924
-    $atom:H22 $mol:... @atom:60LCH2 0.0  2.5066  0.6310 -0.8924
+    $atom:C1  $mol:... @atom:57  -0.12   0.0000  0.0000  0.0000  # CH2 carbon 1
+    $atom:H11 $mol:... @atom:60   0.06   0.0000  0.6350  0.8900  # CH2 hydrogen 1
+    $atom:H12 $mol:... @atom:60   0.06   0.6350  0.0000 -0.8900  # CH2 hydrogen 2
+    $atom:O   $mol:... @atom:72   0.00   1.2533  0.0000  0.0000  # Ether oxygen
+    $atom:C2  $mol:... @atom:57  -0.12   2.5066  0.0000  0.0000  # CH2 carbon 2
+    $atom:H21 $mol:... @atom:60   0.06   2.5066  0.6350  0.8900  # CH2 hydrogen 1
+    $atom:H22 $mol:... @atom:60   0.06   2.5066  0.6350 -0.8900  # CH2 hydrogen 2
   }
   write("Data Bond List") {
     $bond:C1-H11 $atom:C1 $atom:H11
@@ -22,4 +19,3 @@ CH2O inherits OPLSAA {
     $bond:C2-H22 $atom:C2 $atom:H22
   }
 }
-
