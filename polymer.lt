@@ -1,0 +1,20 @@
+#32
+
+import "ch3.lt"
+import "ch2o.lt"
+
+Polymer inherits OPLSAA {
+  # Create CH3 caps and CH2OCH2 core
+  ch3_left = new CH3.move(0.0, 0.0, 0.0)
+  segments = new CH2OCH2[32].move(1.2533, 0.0, 0.0)
+  ch3_right = new CH3.move(33.92, 0.0, 0.0)
+
+  write("Data Bond List") {
+    $bond:ch3_left-segment1 $atom:ch3_left/C1 $atom:segments[0]/C1
+    # Connect all CH2OCH2 segments
+    for (i = 0; i < 31; i++) {
+      $bond:segment[i]-segment[i+1] $atom:segments[i]/C2 $atom:segments[i+1]/C1
+    }
+    $bond:segment32-ch3_right $atom:segments[31]/C2 $atom:ch3_right/C1
+  }
+}
