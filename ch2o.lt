@@ -1,3 +1,6 @@
+#set type @atom:57L charge -0.148   # C - CT | CH2 C: alkanes (LOPLS,2012)
+#set type @atom:60LCH2 charge 0.074 # H - HC | CH2 H: alkanes (LOPLS,2012)
+
 import "oplsaa.lt"
 
 CH2O inherits OPLSAA {
